@@ -1,0 +1,421 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis XV Años Nat</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      font-family: 'Playfair Display', serif;
+      background-image: url('https://media.istockphoto.com/id/1292341024/es/foto/desenfoque-abstracto-hermoso-color-oro-rosa-color-metalizado-fondo-brillante-para-festival-de.jpg?s=612x612&w=0&k=20&c=sZYAv973fNNkyO7jQ4XsMEKVdAw6DYmdKTfkQp8WMmM=');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.2em;
+      line-height: 1.6;
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4em;
+      margin-bottom: 0.2em;
+      color: #b86cc9;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      animation: glowTitle 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowTitle {
+      0% { color: #fb5ed1; text-shadow: 2px 2px 6px rgb(255, 255, 255); }
+      50% { color: #f99fed; text-shadow: 0 0 12px rgb(252, 252, 252); }
+      100% { color: #ed0fc1; text-shadow: 2px 2px 6px rgba(242, 142, 242, 0.679); }
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: 20px;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+    }
+
+    .ceremony {
+      background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://example.com/imagen-fondo-ceremonia.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    .reception {
+      background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://example.com/imagen-fondo-recepcion.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    .quince-img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .quince-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .glitter {
+      position: fixed;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s ease-in-out infinite, fall 12s linear infinite;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10vh) translateX(0) rotate(0deg) scale(1); opacity: 1; }
+      100% { transform: translateY(120vh) translateX(50px) rotate(360deg) scale(0.8); opacity: 1; }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.5); opacity: 1; }
+    }
+
+    .countdown {
+      background: rgba(255, 240, 250, 0.85);
+      border: 2px solid #e29ae0;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 30px 0;
+      box-shadow: 0 4px 20px rgba(236, 156, 232, 0.5);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .countdown p {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      color: #b86cc9;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      margin: 10px 0;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); color: #b86cc9; }
+      50% { transform: scale(1.05); color: #ed0fc1; }
+      100% { transform: scale(1); color: #b86cc9; }
+    }
+
+    /* Estilo para la imagen del código de vestimenta */
+    .dresscode-img {
+      width: 80%;
+      max-width: 400px;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: float 3s ease-in-out infinite;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .dresscode-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(255, 192, 203, 0.6), 0 0 20px rgba(255, 182, 193, 0.8);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      body { font-size: 1em; padding: 10px; }
+      h1 { font-size: 3em; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2.5em; }
+    }
+    .rsvp-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn.si {
+  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  color: white;
+}
+
+.btn.no {
+  background: linear-gradient(45deg, #d3d3d3, #a9a9a9);
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Hacer que toda la sección RSVP sobresalga */
+.section.rsvp {
+  background: rgba(255, 240, 250, 0.95);
+  border: 3px solid #e29ae0;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(236, 156, 232, 0.6);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: pulseRSVP 2s infinite;
+}
+
+@keyframes pulseRSVP {
+  0% { box-shadow: 0 0 20px rgba(236, 156, 232, 0.6); }
+  50% { box-shadow: 0 0 40px rgba(236, 156, 232, 0.9); }
+  100% { box-shadow: 0 0 20px rgba(236, 156, 232, 0.6); }
+}
+.gift-section {
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(255, 240, 250, 0.85);
+  border: 2px solid #e29ae0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(236, 156, 232, 0.5);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.gift-link {
+  text-decoration: none;
+  color: #b86cc9;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift-img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gift-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 192, 203, 0.6), 0 0 20px rgba(255, 182, 193, 0.8);
+}
+
+.gift-section p {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+body *:not(h1) {
+  font-family: 'Dancing Script', cursive;
+}
+/* Aplica el efecto del reloj a todo menos el título principal */
+body p, 
+body strong, 
+body div.section p, 
+body footer p, 
+body a, 
+body li {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+  color: #b86cc9;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+.section p {
+  margin-bottom: 15px;
+}
+.btn.si {
+  background: linear-gradient(45deg, #d63384, #c2185b); /* degradado más oscuro */
+  color: #fff; /* blanco, porque el fondo es oscuro */
+}
+.btn.si {
+  background: linear-gradient(45deg, #ffe6f0, #ffb6d9); /* rosa pastel claro */
+  color: #8b005d; /* un tono de rosa/morado oscuro */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <h1>Mis XV Años Nat</h1>
+  <p>Los momentos más esperados se sueñan, se imaginan, se construyen y hoy, que el día ha llegado, lo más importante es que estés a mi lado.</p>
+
+  <!-- Imagen de la quinceañera -->
+  <img src="C:\Users\52444\Documents\XV AÑOS/Nat.jpeg" alt="Foto de la quinceañera" class="quince-img" />
+
+  <p><strong>Fecha:</strong>Viernes 30 . Mayo . 2025</p>
+<p><strong>Mis Papás:</strong><br>Celso Clemente Montiel 	Sánchez<br>Viridiana Lozano Barrera</p>
+<p><strong>Mis Padrinos:</strong><br>Marco Jeronimo Esparza López ♰ <br>Alejandra Montiel 	Sánchez</p>
+
+<div class="section ceremony">
+  <p><strong>Ceremonia Religiosa</strong></p>
+  <p>Templo de San Agustín</p>
+  <p>Hora: 06:00 p.m.</p>
+  <p>José María Morelos y Pavón s/n, Centro Histórico, San Luis Potosí, S.L.P.</p>
+  <a href="https://www.google.com.mx/maps/place/Templo+de+San+Agust%C3%ADn/@22.1497191,-100.9770501,17z/data=!3m1!4b1!4m6!3m5!1s0x842aa203d3419d63:0x6f0a427f12e506ee!8m2!3d22.1497191!4d-100.9744752!16s%2Fg%2F11bx563pnq?hl=es&entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" class="btn si" style="margin-top: 10px;">Ver ubicación</a>
+  <img src="C:\Users\52444\Documents\XV AÑOS/Templo.jpeg" alt="Ceremonia Religiosa" class="quince-img">
+</div>
+
+<div class="section reception">
+  <p><strong>Recepción</strong></p>
+  <p>Salón Casa Mia</p>
+  <p>Hora: 07:45 p.m.</p>
+  <p>Av. Plaza Milenio 120, Lomas del Tecnológico, 78215 San Luis Potosí, S.L.P.</p>
+  <a href="https://www.google.com.mx/maps/place/Casa+Mia+Eventos/@22.1244468,-101.0319284,17z/data=!3m1!4b1!4m6!3m5!1s0x842a99730345fd77:0xa83bad6ee7c7f789!8m2!3d22.1244468!4d-101.0293535!16s%2Fg%2F11f72wqhkk?hl=es&entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" class="btn si" style="margin-top: 10px;">Ver ubicación</a>
+  <img src="C:\Users\52444\Documents\XV AÑOS/Mia.jpg" alt="Recepción" class="quince-img">
+</div>
+
+  <div class="section countdown">
+    <p><strong>¡Para el gran día faltan!</strong></p>
+    <p id="timer">Días: 0 | Horas: 0 | Minutos: 0 | Segundos: 0</p>
+  </div>
+
+  <div class="section rsvp">
+    <p><strong>Código de Vestimenta:</strong> Formal</p>
+    <!-- Imagen que flota y brilla -->
+    <img src="C:\Users\52444\Documents\XV AÑOS/Code.png" alt="Código de Vestimenta" class="dresscode-img">
+
+    
+    </div>
+    <!-- Mesa de regalos -->
+<footer class="gift-section" style="padding: 24px; background-color: #fff5f8; border-radius: 16px; text-align: center; margin-top: 30px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); font-family: 'Playfair Display', serif;">
+  <a href="https://mesaderegalos.liverpool.com.mx/eventodebusqueda" target="_blank" class="gift-link" style="text-decoration: none; color: #5a3e36;">
+    <p style="font-size: 22px; margin-bottom: 16px; color: #f88af0;"><strong>Mesa de Regalos Liverpool</strong></p>
+    <p style="font-size: 18px; margin: 10px 0;"><strong style="color: #f88af0;">Nombre:</strong> XV años Nat</p>
+    <p style="font-size: 18px; margin: 10px 0;"><strong style="color: #f88af0;">No. Evento:</strong> 51578833</p>
+    <p style="font-size: 18px; margin: 10px 0;"><strong style="color: #f88af0;">Vencimiento:</strong> 28 de Junio del 2025</p>
+  </a>
+</footer>
+
+<!-- Sección Lluvia de Sobres -->
+<div class="gift-section" style="margin-top: 30px; background-color: #fff0fa; border: 2px solid #e29ae0; border-radius: 20px; box-shadow: 0 6px 15px rgba(236, 156, 232, 0.5); padding: 20px;">
+  <p style="font-size: 2em; color: #b86cc9; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); margin-bottom: 20px;">✨ Lluvia de Sobres ✨</p>
+  <img src="C:\Users\52444\Documents\XV AÑOS/dinero.jpg" alt="Sobre con dinero" style="width: 120px; margin-top: 15px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); animation: float 3s ease-in-out infinite;">
+</div>
+
+
+  </div>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<!-- Confirmar Asistencia  -->
+<p><strong>CONFIRMA TU ASISTENCIA</strong></p>
+<p>¿ASISTIRÁS al evento?</p>
+<div class="rsvp-buttons">
+  <!-- Botón de WhatsApp -->
+ <!-- Botón de WhatsApp -->
+ <a href="https://wa.me/5214441880351?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20Años%20de%20Nat.%20Los%20nombres%20de%20los%20asistentes%20son:%20________" target="_blank" class="btn si">Sí asistiré</a>
+  <!-- Botón para No asistir -->
+  <a href="https://wa.me/5214441880351?text=Hola,%20lamentablemente%20NO%20podré%20asistir%20a%20los%20XV%20Años%20de%20Nat." target="_blank" class="btn no">No asistiré</a>
+
+  <script>
+    const targetDate = new Date("May 30, 2025 00:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("timer").innerHTML = "¡Hoy es el gran día!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML =
+        `Días: ${days} | Horas: ${hours} | Minutos: ${minutes} | Segundos: ${seconds}`;
+    }, 1000);
+  </script>
+
+  <!-- Glitter -->
+  <script>
+    function createGlitter() {
+      const glitter = document.createElement('div');
+      glitter.classList.add('glitter');
+
+      const size = Math.random() * 10 + 10;
+      glitter.style.width = size + 'px';
+      glitter.style.height = size + 'px';
+      glitter.style.left = Math.random() * (window.innerWidth - size) + 'px';
+      glitter.style.top = '-50px';
+
+      glitter.style.background = 'radial-gradient(circle, rgba(255, 182, 193, 1) 0%, rgba(255, 182, 193, 0.6) 55%, rgba(255, 182, 193, 0) 20%)';
+
+      document.body.appendChild(glitter);
+
+      setTimeout(() => {
+        glitter.remove();
+      }, 12000);
+    }
+
+    setInterval(createGlitter, 40);
+  </script>
+
+</body>
+</html>
