@@ -295,6 +295,34 @@ body li {
   color: #8b005d; /* un tono de rosa/morado oscuro */
 }
 
+    @media (max-width: 600px) {
+  .box {
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    animation: fadeIn 1s ease-out;
+  }
+
+  .confirm-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+  margin: 10px 0;
+  color: #b86cc9;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .confirm-text {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirm-text {
+    font-size: 1.5em;
+  }
+}
+
 
   </style>
 </head>
@@ -361,7 +389,7 @@ body li {
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <!-- Confirmar Asistencia  -->
-<p><strong>CONFIRMA TU ASISTENCIA</strong></p>
+<p class="confirm-text"><strong>CONFIRMA TU ASISTENCIA</strong></p>
 <p>¿ASISTIRÁS al evento?</p>
 <div class="rsvp-buttons">
   <!-- Botón de WhatsApp -->
